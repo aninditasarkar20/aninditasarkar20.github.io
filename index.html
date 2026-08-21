@@ -3,18 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anindita Sarkar | Researcher | IIT Kharagpur</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Anindita Sarkar | Research Portfolio</title>
 
     <style>
 
-        /* ---------- GLOBAL ---------- */
+        /* =========================================
+           GLOBAL
+        ========================================= */
 
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         html {
@@ -22,326 +24,638 @@
         }
 
         body {
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: 300;
-            background: #f7f8fc;
-            color: #263238;
+            margin: 0;
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            color: #38364f;
+
             line-height: 1.7;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(224, 218, 255, 0.8),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(215, 207, 245, 0.7),
+                    transparent 35%
+                ),
+
+                #f6f4fb;
         }
 
 
-        /* ---------- HEADER ---------- */
-
-        header {
-            background: linear-gradient(135deg, #1d4ed8, #2563eb, #0891b2);
-            color: white;
-            padding: clamp(45px, 7vw, 70px) 30px;
-        }
+        /* =========================================
+           HERO SECTION
+        ========================================= */
 
         .hero {
-            max-width: 1050px;
-            margin: auto;
+
+            min-height: 420px;
 
             display: flex;
             align-items: center;
 
-            gap: clamp(25px, 5vw, 50px);
+            padding:
+                clamp(50px, 8vw, 100px)
+                clamp(25px, 7vw, 100px);
 
-            flex-wrap: wrap;
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #eeeaf8 0%,
+                    #dfd8f0 45%,
+                    #cec5e5 100%
+                );
+
+            border-radius:
+                0 0 45px 45px;
+
         }
 
-        .profile-photo {
-            width: clamp(140px, 18vw, 190px);
-            height: clamp(140px, 18vw, 190px);
+
+        .hero-content {
+
+            width: min(1100px, 100%);
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: clamp(30px, 5vw, 70px);
+
+        }
+
+
+        /* =========================================
+           PROFILE IMAGE
+        ========================================= */
+
+        .profile-img {
+
+            width:
+                clamp(130px, 18vw, 210px);
+
+            aspect-ratio: 1;
 
             object-fit: cover;
+
             border-radius: 50%;
 
-            border: 5px solid rgba(255, 255, 255, 0.9);
+            border:
+                6px solid
+                rgba(255, 255, 255, 0.85);
 
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+            box-shadow:
+
+                0 15px 40px
+                rgba(83, 68, 130, 0.18);
 
             flex-shrink: 0;
+
         }
 
-        .hero-text {
-            flex: 1 1 400px;
-            min-width: 0;
-        }
+
+        /* =========================================
+           HERO TEXT
+        ========================================= */
 
         .hero-text h1 {
-            font-size: clamp(36px, 5vw, 52px);
-            font-weight: 300;
-            letter-spacing: -1px;
-            margin-bottom: 8px;
-            line-height: 1.2;
+
+            margin: 0;
+
+            font-size:
+                clamp(42px, 6vw, 76px);
+
+            font-weight: 400;
+
+            letter-spacing: -2px;
+
+            color: #3f3a72;
+
         }
+
 
         .hero-text h2 {
-            font-size: clamp(18px, 2.5vw, 24px);
-            font-weight: 300;
-            margin-bottom: 18px;
-            line-height: 1.4;
+
+            margin:
+
+                10px 0 0;
+
+            font-size:
+                clamp(20px, 2.5vw, 30px);
+
+            font-weight: 400;
+
+            color: #615b8b;
+
         }
 
-        .hero-text p {
-            font-size: clamp(15px, 2vw, 17px);
-            font-weight: 300;
-            opacity: 0.95;
-            overflow-wrap: break-word;
+
+        .research-tags {
+
+            margin-top: 18px;
+
+            font-size:
+                clamp(14px, 1.5vw, 18px);
+
+            color: #706b91;
+
+            white-space: nowrap;
+
         }
 
 
-        /* ---------- NAVIGATION ---------- */
+        /* =========================================
+           NAVIGATION
+        ========================================= */
 
         nav {
-            background: white;
 
-            padding: 18px;
+            width:
+                min(1050px, 90%);
 
-            text-align: center;
+            margin:
+                -35px auto 50px;
 
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            padding:
+                20px 30px;
 
-            position: sticky;
-            top: 0;
+            display: flex;
+
+            justify-content: center;
+
+            gap:
+                clamp(25px, 7vw, 80px);
+
+            background:
+
+                rgba(255, 255, 255, 0.82);
+
+            backdrop-filter:
+
+                blur(12px);
+
+            -webkit-backdrop-filter:
+
+                blur(12px);
+
+            border:
+
+                1px solid
+                rgba(255, 255, 255, 0.8);
+
+            border-radius: 22px;
+
+            box-shadow:
+
+                0 12px 35px
+                rgba(79, 62, 130, 0.10);
+
+            position: relative;
 
             z-index: 10;
 
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px 25px;
         }
 
+
         nav a {
-            color: #333;
 
             text-decoration: none;
 
-            font-size: 15px;
+            color: #4a4763;
 
-            font-weight: 400;
+            font-size: 17px;
 
-            transition: color 0.2s;
+            transition:
+
+                color 0.3s ease,
+                transform 0.3s ease;
+
         }
+
 
         nav a:hover {
-            color: #2563eb;
+
+            color: #7565b8;
+
+            transform:
+                translateY(-2px);
+
         }
 
 
-        /* ---------- MAIN ---------- */
+        /* =========================================
+           MAIN CONTENT
+        ========================================= */
 
         main {
-            width: min(1050px, calc(100% - 40px));
 
-            margin: clamp(30px, 5vw, 55px) auto;
+            padding-bottom: 60px;
+
         }
+
 
         section {
-            background: white;
 
-            padding: clamp(25px, 5vw, 42px);
+            width:
+                min(1050px, 90%);
 
-            margin-bottom: 35px;
+            margin:
+                35px auto;
 
-            border-radius: 18px;
+            padding:
+                clamp(30px, 5vw, 55px);
 
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            background:
+
+                rgba(255, 255, 255, 0.72);
+
+            border:
+
+                1px solid
+                rgba(255, 255, 255, 0.9);
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 12px 40px
+                rgba(87, 70, 135, 0.08);
+
         }
+
+
+        /* =========================================
+           SECTION HEADINGS
+        ========================================= */
 
         section h2 {
-            color: #2563eb;
 
-            font-size: clamp(24px, 3vw, 28px);
+            margin-top: 0;
 
-            font-weight: 400;
+            margin-bottom: 30px;
 
-            margin-bottom: 22px;
+            padding-bottom: 14px;
+
+            position: relative;
+
+            font-size:
+                clamp(28px, 4vw, 38px);
+
+            font-weight: 500;
+
+            color: #514a91;
+
         }
 
-        section p {
-            font-size: 16px;
-            font-weight: 300;
+
+        section h2::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 55px;
+
+            height: 3px;
+
+            border-radius: 20px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #7868bd,
+                    #a99be0
+                );
+
         }
 
 
-        /* ---------- RESEARCH INTERESTS ---------- */
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about-text {
+
+            max-width: 900px;
+
+            font-size:
+                clamp(16px, 2vw, 18px);
+
+            color: #5e5a72;
+
+        }
+
+
+        /* =========================================
+           RESEARCH CARDS
+        ========================================= */
 
         .research-grid {
 
             display: grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(min(100%, 210px), 1fr));
 
-            gap: 20px;
+                repeat(
+                    auto-fit,
+                    minmax(210px, 1fr)
+                );
 
-            width: 100%;
+            gap: 22px;
+
         }
+
 
         .research-card {
 
-            min-width: 0;
+            padding:
+                32px 24px;
 
-            padding: 25px;
+            text-align: center;
 
-            border-radius: 15px;
+            background:
 
-            background: #f5f7ff;
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.95),
+                    rgba(246, 243, 255, 0.9)
+                );
 
-            border: 1px solid #e5e9f5;
+            border:
+
+                1px solid
+                rgba(125, 105, 185, 0.10);
+
+            border-radius: 20px;
+
+            box-shadow:
+
+                0 8px 25px
+                rgba(80, 65, 130, 0.07);
 
             transition:
-                transform 0.2s,
-                box-shadow 0.2s;
+
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
         }
+
 
         .research-card:hover {
 
-            transform: translateY(-4px);
+            transform:
+                translateY(-7px);
 
             box-shadow:
-                0 10px 25px rgba(37, 99, 235, 0.10);
-        }
 
-        .research-card h3 {
+                0 18px 40px
+                rgba(86, 68, 140, 0.15);
 
-            color: #2563eb;
-
-            font-size: 18px;
-
-            font-weight: 400;
-
-            margin-bottom: 10px;
-
-            line-height: 1.35;
-
-            overflow-wrap: break-word;
-        }
-
-        .research-card p {
-
-            font-size: 14px;
-
-            line-height: 1.6;
         }
 
 
-        /* ---------- PUBLICATIONS ---------- */
+        /* =========================================
+           RESEARCH ICON
+        ========================================= */
 
-        .publication {
+        .research-icon {
 
-            padding: 22px 0;
+            width: 70px;
 
-            border-bottom:
-                1px solid #e8eaf0;
-        }
+            height: 70px;
 
-        .publication:last-child {
-
-            border-bottom: none;
-        }
-
-        .publication h3 {
-
-            font-size: 17px;
-
-            font-weight: 400;
-
-            color: #30343b;
-        }
-
-        .publication p {
-
-            font-size: 14px;
-
-            margin-top: 5px;
-
-            color: #666;
-        }
-
-
-        /* ---------- CONTACT ---------- */
-
-        .contact-links {
+            margin:
+                0 auto 20px;
 
             display: flex;
 
-            flex-wrap: wrap;
+            align-items: center;
 
-            gap: 15px 25px;
+            justify-content: center;
 
-            margin-top: 25px;
+            border-radius: 50%;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #eeebfb,
+                    #ded6f3
+                );
+
+            color: #7162b5;
+
+            font-size: 30px;
+
         }
 
-        .contact-links a {
 
-            color: #2563eb;
+        .research-card h3 {
 
-            text-decoration: none;
+            margin:
+
+                0 0 12px;
+
+            font-size: 19px;
+
+            font-weight: 500;
+
+            color: #514a91;
+
+            white-space: nowrap;
+
+        }
+
+
+        .research-card p {
+
+            margin: 0;
 
             font-size: 15px;
 
-            overflow-wrap: break-word;
-        }
+            color: #686479;
 
-        .contact-links a:hover {
-
-            text-decoration: underline;
         }
 
 
-        /* ---------- FOOTER ---------- */
+        /* =========================================
+           PUBLICATIONS
+        ========================================= */
+
+        .publication {
+
+            padding: 22px;
+
+            margin-bottom: 18px;
+
+            background:
+
+                rgba(255, 255, 255, 0.75);
+
+            border-left:
+
+                4px solid #9687d1;
+
+            border-radius: 12px;
+
+            box-shadow:
+
+                0 5px 18px
+                rgba(90, 70, 140, 0.06);
+
+            transition:
+
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .publication:hover {
+
+            transform:
+                translateX(5px);
+
+            box-shadow:
+
+                0 10px 25px
+                rgba(90, 70, 140, 0.10);
+
+        }
+
+
+        .publication h3 {
+
+            margin-top: 0;
+
+            color: #514a91;
+
+            font-size: 18px;
+
+        }
+
+
+        .publication p {
+
+            color: #666276;
+
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-info {
+
+            font-size: 17px;
+
+            color: #5f5a72;
+
+        }
+
+
+        .contact-info a {
+
+            color: #6d5cad;
+
+            text-decoration: none;
+
+            font-weight: 500;
+
+        }
+
+
+        .contact-info a:hover {
+
+            color: #483b82;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
 
         footer {
 
             text-align: center;
 
-            padding: 35px 20px;
+            padding:
+                30px 20px;
 
-            color: #777;
+            color: #77728b;
 
             font-size: 14px;
+
         }
 
 
-        /* ---------- SMALL SCREEN ADJUSTMENTS ---------- */
+        /* =========================================
+           MOBILE
+        ========================================= */
 
-        @media (max-width: 650px) {
+        @media
+        (max-width: 700px) {
 
-            .hero {
+            .hero-content {
 
                 flex-direction: column;
 
                 text-align: center;
+
             }
 
-            .hero-text {
 
-                flex-basis: auto;
+            .hero {
+
+                padding-top: 70px;
+
             }
 
-            header {
 
-                padding-left: 20px;
-                padding-right: 20px;
+            .research-tags {
+
+                white-space: normal;
+
             }
 
-            main {
-
-                width: min(100% - 24px, 1050px);
-            }
 
             nav {
 
-                gap: 8px 18px;
+                flex-wrap: wrap;
+
+                gap: 18px;
+
+                margin-top: -25px;
+
             }
 
-            nav a {
 
-                font-size: 14px;
+            .research-card h3 {
+
+                white-space: normal;
+
             }
 
         }
@@ -354,29 +668,43 @@
 <body>
 
 
-    <!-- ---------- HEADER ---------- -->
+    <!-- =====================================
+         HERO
+    ====================================== -->
 
-    <header>
+    <header class="hero">
 
-        <div class="hero">
+        <div class="hero-content">
 
             <img
                 src="anindita.jpeg"
                 alt="Anindita Sarkar"
-                class="profile-photo"
+                class="profile-img"
             >
+
 
             <div class="hero-text">
 
-                <h1>Anindita Sarkar</h1>
+                <h1>
+                    Anindita Sarkar
+                </h1>
+
 
                 <h2>
                     Research Scholar · IIT Kharagpur
                 </h2>
 
-                <p>
-                    Functional Materials · Electron Microscopy ·
-                    Electrocatalysis · Density Functional Theory
+
+                <p class="research-tags">
+
+                    Functional Materials
+                    ·
+                    Electron Microscopy
+                    ·
+                    Electrocatalysis
+                    ·
+                    Density Functional Theory
+
                 </p>
 
             </div>
@@ -386,105 +714,155 @@
     </header>
 
 
-    <!-- ---------- NAVIGATION ---------- -->
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
 
     <nav>
 
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
-        <a href="#research">Research</a>
+        <a href="#research">
+            Research
+        </a>
 
-        <a href="#publications">Publications</a>
+        <a href="#publications">
+            Publications
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+            Contact
+        </a>
 
     </nav>
 
 
-    <!-- ---------- MAIN CONTENT ---------- -->
 
     <main>
 
 
-        <!-- ---------- ABOUT ---------- -->
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
 
         <section id="about">
 
-            <h2>About Me</h2>
+            <h2>
+                About Me
+            </h2>
 
-            <p>
-                I am a research scholar at IIT Kharagpur, working on the
-                design and engineering of functional materials for catalytic
-                and energy-related applications. My research combines
-                experimental studies, advanced characterization and
-                computational approaches to understand structure–property
-                relationships in materials.
-            </p>
 
-            <br>
+            <p class="about-text">
 
-            <p>
-                By training, I am a chemist, with Bachelor's and Master's
-                degrees in Chemistry, followed by an M. Tech in Materials
-                Science and Engineering. This interdisciplinary background
-                allows me to bridge fundamental chemistry with materials
-                engineering.
+                I am a research scholar at IIT Kharagpur, working on
+                the design and engineering of functional materials for
+                catalytic and energy-related applications.
+
+                My research combines experimental studies, advanced
+                characterization and computational approaches to
+                understand structure–property relationships in materials.
+
             </p>
 
         </section>
 
 
-        <!-- ---------- RESEARCH ---------- -->
+
+        <!-- =====================================
+             RESEARCH INTERESTS
+        ====================================== -->
 
         <section id="research">
 
-            <h2>Research Interests</h2>
+            <h2>
+                Research Interests
+            </h2>
+
 
             <div class="research-grid">
 
 
                 <div class="research-card">
 
-                    <h3>Materials Synthesis</h3>
+                    <div class="research-icon">
+                        ⚗
+                    </div>
+
+                    <h3>
+                        Materials Synthesis
+                    </h3>
 
                     <p>
-                        Design and synthesis of advanced functional
-                        materials.
+
+                        Design and synthesis of
+                        advanced functional materials.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="research-card">
 
-                    <h3>Electron Microscopy</h3>
+                    <div class="research-icon">
+                        🔬
+                    </div>
+
+                    <h3>
+                        Electron Microscopy
+                    </h3>
 
                     <p>
-                        Atomic-scale investigation of materials
-                        structure and chemistry.
+
+                        Atomic-scale investigation
+                        of materials structure and chemistry.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="research-card">
 
-                    <h3>Electrocatalysis</h3>
+                    <div class="research-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Electrocatalysis
+                    </h3>
 
                     <p>
-                        Investigation of electrocatalytic activity.
+
+                        Investigation of
+                        electrocatalytic activity.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="research-card">
 
-                    <h3>Density Functional Theory</h3>
+                    <div class="research-icon">
+                        ⌬
+                    </div>
+
+                    <h3>
+                        Density Functional Theory
+                    </h3>
 
                     <p>
-                        First-principles investigation of structure
-                        and properties.
+
+                        First-principles investigation
+                        of structure and properties.
+
                     </p>
 
                 </div>
@@ -495,59 +873,89 @@
         </section>
 
 
-        <!-- ---------- PUBLICATIONS ---------- -->
+
+        <!-- =====================================
+             PUBLICATIONS
+        ====================================== -->
 
         <section id="publications">
 
-            <h2>Publications</h2>
+            <h2>
+                Publications
+            </h2>
+
 
             <div class="publication">
 
-                <h3>Research Publications</h3>
+                <h3>
+                    Research Publications
+                </h3>
 
                 <p>
-                    Selected publications and ongoing research work
-                    will be listed here.
+
+                    Selected publications and ongoing
+                    research work will be listed here.
+
                 </p>
 
             </div>
 
+
+            <!--
+            ADD YOUR PUBLICATIONS BELOW
+            -->
+
+
         </section>
 
 
-        <!-- ---------- CONTACT ---------- -->
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
 
         <section id="contact">
 
-            <h2>Contact</h2>
-
-            <p>
-                I would be happy to connect regarding research,
-                collaborations and academic opportunities.
-            </p>
+            <h2>
+                Contact
+            </h2>
 
 
-            <div class="contact-links">
+            <div class="contact-info">
 
-                <a href="mailto:YOUR_EMAIL@gmail.com">
-                    Email
-                </a>
+                <p>
 
-                <a
-                    href="YOUR_LINKEDIN_URL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
+                    Feel free to connect with me regarding
+                    research collaborations and academic opportunities.
 
-                <a
-                    href="YOUR_RESEARCHGATE_URL"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    ResearchGate
-                </a>
+                </p>
+
+
+                <p>
+
+                    LinkedIn:
+                    <a href="YOUR-LINKEDIN-LINK"
+                       target="_blank">
+
+                        Connect with me
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    ORCID:
+                    <a href="YOUR-ORCID-LINK"
+                       target="_blank">
+
+                        View my research profile
+
+                    </a>
+
+                </p>
+
 
             </div>
 
@@ -557,11 +965,14 @@
     </main>
 
 
-    <!-- ---------- FOOTER ---------- -->
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
 
     <footer>
 
-        © 2026 Anindita Sarkar 
+        © 2026 Anindita Sarkar
 
     </footer>
 

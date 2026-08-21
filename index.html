@@ -1,1 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Anindita Sarkar | Researcher | IIT Kharagpur</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    background: #f7f8fb;
+    color: #30343b;
+    line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb, #0891b2);
+    color: white;
+    padding: 70px 30px;
+}
+
+.hero {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.9);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+    flex-shrink: 0;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+
+.hero-text p {
+    font-size: 17px;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav {
+    background: white;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 22px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+    max-width: 1050px;
+    margin: 55px auto;
+    padding: 0 25px;
+}
+
+section {
+    background: white;
+    padding: 42px;
+    margin-bottom: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+section p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* ---------- RESEARCH INTERESTS ---------- */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.research-card {
+    padding: 25px;
+    border-radius: 15px;
+    background: #f5f7ff;
+    border: 1px solid #e5e9f5;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.10);
+}
+
+.research-card h3 {
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.research-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ---------- PUBLICATIONS ---------- */
+
+.publication {
+    padding: 22px 0;
+    border-bottom: 1px solid #e8eaf0;
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.publication h3 {
+    font-size: 17px;
+    font-weight: 400;
+    color: #30343b;
+}
+
+.publication p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 50px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .profile-photo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    nav a {
+        margin: 0 9px;
+        font-size: 14px;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 28px 22px;
+        margin-bottom: 25px;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="hero">
+
+    <img src="anindita.jpeg"
+         alt="Anindita Sarkar"
+         class="profile-photo">
+
+    <div class="hero-text">
+
+        <h1>Anindita Sarkar</h1>
+
+        <h2>Research Scholar · IIT Kharagpur</h2>
+
+        <p>
+            Functional Materials · Electron Microscopy · Electrocatalysis ·
+            Density Functional Theory
+        </p>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<!-- CONTENT -->
+
+<main>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a research scholar at IIT Kharagpur, working on the design and
+engineering of functional materials for catalytic and energy-related
+applications. My research combines experimental studies, advanced
+characterization and computational approaches to understand
+structure–property relationships in materials.
+</p>
+
+<br>
+
+<p>
+By training, I am a chemist, with Bachelor's and Master's degrees in
+Chemistry, followed by an M. Tech in Materials Science and Engineering.
+This interdisciplinary background allows me to bridge fundamental
+chemistry with materials engineering.
+</p>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+<h2>Research Interests</h2>
+
+<div class="research-grid">
+
+<div class="research-card">
+
+<h3>Functional Materials</h3>
+
+<p>
+Design and engineering of advanced materials for energy and catalytic
+applications.
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<h3>Electron Microscopy</h3>
+
+<p>
+Atomic-scale investigation of materials using advanced electron
+microscopy and spectroscopy.
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<h3>Electrocatalysis</h3>
+
+<p>
+Understanding catalytic materials for electrochemical energy
+conversion.
+</p>
+
+</div>
+
+
+<div class="research-card">
+
+<h3>Computational Materials</h3>
+
+<p>
+First-principles investigation of structural, electronic and catalytic
+properties.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PUBLICATIONS -->
+
+<section id="publications">
+
+<h2>Publications</h2>
+
+<div class="publication">
+
+<h3>Research publications</h3>
+
+<p>
+Selected publications and ongoing research work will be listed here.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+I would be happy to connect regarding research, collaborations and
+academic opportunities.
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:YOUR_EMAIL@gmail.com">Email</a>
+
+<a href="YOUR_LINKEDIN_URL" target="_blank">
+LinkedIn
+</a>
+
+<a href="YOUR_RESEARCHGATE_URL" target="_blank">
+ResearchGate
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Anindita Sarkar · Research Scholar · IIT Kharagpur
+
+</footer>
+
+
+</body>
+</html>

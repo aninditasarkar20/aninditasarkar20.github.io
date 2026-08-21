@@ -170,9 +170,32 @@ footer{text-align:center;padding:25px;background:rgba(210,201,230,.6);color:#5d5
 
 <div class="research-card">
 <div class="research-icon">
-<svg viewBox="0 0 100 100" fill="none">
-<path d="M18 38H82V76C82 84 76 88 68 88H32C24 88 18 84 18 76Z M35 22V72M50 16V72M67 25V72M22 72H78" stroke-width="3" stroke-linecap="round"/>
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor"
+       stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
 
+    <!-- Electrochemical cell -->
+    <path d="M20 35 L20 75 L80 75 L80 35" />
+
+    <!-- Electrolyte -->
+    <path d="M20 55 H80" />
+
+    <!-- Working electrode -->
+    <path d="M35 35 V65" />
+    <path d="M30 35 H40" />
+
+    <!-- Reference electrode -->
+    <path d="M50 30 V65" />
+    <path d="M45 30 H55" />
+
+    <!-- Counter electrode -->
+    <path d="M65 35 V65" />
+    <path d="M60 35 H70" />
+
+    <!-- Bubbles -->
+    <circle cx="30" cy="25" r="3" />
+    <circle cx="38" cy="18" r="2" />
+  </svg>
+</div>
 </svg>
 </div>
 <h3>Electrocatalysis</h3>

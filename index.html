@@ -11,224 +11,171 @@
 
     <style>
 
-        /* =========================================
-           GLOBAL
-        ========================================= */
-
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
+
 
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            margin: 0;
-
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Arial,
-                sans-serif;
-
-            color: #38364f;
-
-            line-height: 1.7;
+            font-family: Arial, Helvetica, sans-serif;
 
             background:
-                radial-gradient(
-                    circle at top left,
-                    rgba(224, 218, 255, 0.8),
-                    transparent 35%
-                ),
+                linear-gradient(
+                    135deg,
+                    #f8f6fc 0%,
+                    #f1edf8 50%,
+                    #f8f7fb 100%
+                );
 
-                radial-gradient(
-                    circle at bottom right,
-                    rgba(215, 207, 245, 0.7),
-                    transparent 35%
-                ),
+            color: #383447;
 
-                #f6f4fb;
+            line-height: 1.7;
         }
 
 
-        /* =========================================
+        /* =========================
            HERO SECTION
-        ========================================= */
+        ========================= */
 
         .hero {
 
-            min-height: 420px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #dcd4f0 0%,
+                    #c9bee6 45%,
+                    #b6a8d6 100%
+                );
+
+            padding: 70px 8%;
 
             display: flex;
             align-items: center;
+            gap: 50px;
 
-            padding:
-                clamp(50px, 8vw, 100px)
-                clamp(25px, 7vw, 100px);
+            min-height: 330px;
 
-            background:
+            position: relative;
+            overflow: hidden;
+        }
 
-                linear-gradient(
-                    135deg,
-                    #eeeaf8 0%,
-                    #dfd8f0 45%,
-                    #cec5e5 100%
-                );
 
-            border-radius:
-                0 0 45px 45px;
+        .hero::before {
 
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            right: -100px;
+            top: -180px;
+        }
+
+
+        .profile-image {
+
+            width: 180px;
+            height: 180px;
+
+            min-width: 180px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 5px solid rgba(255, 255, 255, 0.8);
+
+            box-shadow:
+                0 12px 30px
+                rgba(70, 50, 110, 0.25);
+
+            position: relative;
+            z-index: 1;
         }
 
 
         .hero-content {
 
-            width: min(1100px, 100%);
-
-            margin: auto;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: clamp(30px, 5vw, 70px);
-
+            position: relative;
+            z-index: 1;
         }
 
 
-        /* =========================================
-           PROFILE IMAGE
-        ========================================= */
+        .hero h1 {
 
-        .profile-img {
+            font-size: clamp(42px, 5vw, 72px);
 
-            width:
-                clamp(130px, 18vw, 210px);
+            font-weight: 500;
 
-            aspect-ratio: 1;
+            color: #33295a;
 
-            object-fit: cover;
+            margin-bottom: 10px;
 
-            border-radius: 50%;
-
-            border:
-                6px solid
-                rgba(255, 255, 255, 0.85);
-
-            box-shadow:
-
-                0 15px 40px
-                rgba(83, 68, 130, 0.18);
-
-            flex-shrink: 0;
-
+            line-height: 1.2;
         }
 
 
-        /* =========================================
-           HERO TEXT
-        ========================================= */
+        .subtitle {
 
-        .hero-text h1 {
+            font-size: clamp(20px, 2vw, 28px);
 
-            margin: 0;
+            color: #4c426e;
 
-            font-size:
-                clamp(42px, 6vw, 76px);
-
-            font-weight: 400;
-
-            letter-spacing: -2px;
-
-            color: #3f3a72;
-
+            margin-bottom: 15px;
         }
 
 
-        .hero-text h2 {
+        .research-line {
 
-            margin:
+            font-size: clamp(14px, 1.4vw, 18px);
 
-                10px 0 0;
-
-            font-size:
-                clamp(20px, 2.5vw, 30px);
-
-            font-weight: 400;
-
-            color: #615b8b;
-
-        }
-
-
-        .research-tags {
-
-            margin-top: 18px;
-
-            font-size:
-                clamp(14px, 1.5vw, 18px);
-
-            color: #706b91;
+            color: #5e5675;
 
             white-space: nowrap;
 
+            overflow-x: auto;
         }
 
 
-        /* =========================================
+        /* =========================
            NAVIGATION
-        ========================================= */
+        ========================= */
 
         nav {
 
-            width:
-                min(1050px, 90%);
+            background: rgba(255, 255, 255, 0.75);
 
-            margin:
-                -35px auto 50px;
+            backdrop-filter: blur(12px);
 
-            padding:
-                20px 30px;
+            border-bottom:
+                1px solid rgba(100, 80, 140, 0.12);
+
+            padding: 20px;
 
             display: flex;
 
             justify-content: center;
 
-            gap:
-                clamp(25px, 7vw, 80px);
+            gap: clamp(25px, 7vw, 80px);
 
-            background:
+            position: sticky;
 
-                rgba(255, 255, 255, 0.82);
+            top: 0;
 
-            backdrop-filter:
-
-                blur(12px);
-
-            -webkit-backdrop-filter:
-
-                blur(12px);
-
-            border:
-
-                1px solid
-                rgba(255, 255, 255, 0.8);
-
-            border-radius: 22px;
-
-            box-shadow:
-
-                0 12px 35px
-                rgba(79, 62, 130, 0.10);
-
-            position: relative;
-
-            z-index: 10;
-
+            z-index: 100;
         }
 
 
@@ -236,216 +183,151 @@
 
             text-decoration: none;
 
-            color: #4a4763;
+            color: #514866;
 
             font-size: 17px;
 
-            transition:
-
-                color 0.3s ease,
-                transform 0.3s ease;
-
+            transition: 0.3s;
         }
 
 
         nav a:hover {
 
-            color: #7565b8;
-
-            transform:
-                translateY(-2px);
+            color: #7555a6;
 
         }
 
 
-        /* =========================================
+        /* =========================
            MAIN CONTENT
-        ========================================= */
+        ========================= */
 
-        main {
+        .container {
 
-            padding-bottom: 60px;
+            width: min(1100px, 90%);
 
+            margin: 60px auto;
         }
 
 
         section {
 
-            width:
-                min(1050px, 90%);
-
-            margin:
-                35px auto;
-
-            padding:
-                clamp(30px, 5vw, 55px);
-
-            background:
-
-                rgba(255, 255, 255, 0.72);
+            background: rgba(255, 255, 255, 0.65);
 
             border:
+                1px solid rgba(130, 105, 170, 0.12);
 
-                1px solid
-                rgba(255, 255, 255, 0.9);
+            border-radius: 22px;
 
-            border-radius: 25px;
+            padding: clamp(30px, 5vw, 55px);
+
+            margin-bottom: 35px;
 
             box-shadow:
-
-                0 12px 40px
-                rgba(87, 70, 135, 0.08);
-
+                0 10px 35px
+                rgba(75, 55, 105, 0.08);
         }
 
 
-        /* =========================================
-           SECTION HEADINGS
-        ========================================= */
+        h2 {
 
-        section h2 {
+            color: #4d3d78;
 
-            margin-top: 0;
+            font-size: clamp(28px, 3vw, 38px);
 
             margin-bottom: 30px;
 
-            padding-bottom: 14px;
-
             position: relative;
-
-            font-size:
-                clamp(28px, 4vw, 38px);
-
-            font-weight: 500;
-
-            color: #514a91;
-
         }
 
 
-        section h2::after {
+        h2::after {
 
             content: "";
 
-            position: absolute;
+            display: block;
 
-            left: 0;
-
-            bottom: 0;
-
-            width: 55px;
+            width: 45px;
 
             height: 3px;
 
-            border-radius: 20px;
+            background: #7c62ae;
 
-            background:
+            margin-top: 8px;
 
-                linear-gradient(
-                    90deg,
-                    #7868bd,
-                    #a99be0
-                );
-
+            border-radius: 10px;
         }
 
 
-        /* =========================================
+        /* =========================
            ABOUT
-        ========================================= */
+        ========================= */
 
         .about-text {
 
-            max-width: 900px;
+            max-width: 850px;
 
-            font-size:
-                clamp(16px, 2vw, 18px);
+            font-size: 17px;
 
-            color: #5e5a72;
-
+            color: #555062;
         }
 
 
-        /* =========================================
+        /* =========================
            RESEARCH CARDS
-        ========================================= */
+        ========================= */
 
         .research-grid {
 
             display: grid;
 
             grid-template-columns:
-
-                repeat(
-                    auto-fit,
-                    minmax(210px, 1fr)
-                );
+                repeat(auto-fit, minmax(210px, 1fr));
 
             gap: 22px;
-
         }
 
 
         .research-card {
 
-            padding:
-                32px 24px;
-
-            text-align: center;
-
             background:
-
-                linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.95),
-                    rgba(246, 243, 255, 0.9)
-                );
+                rgba(255, 255, 255, 0.65);
 
             border:
-
-                1px solid
-                rgba(125, 105, 185, 0.10);
+                1px solid rgba(120, 95, 160, 0.12);
 
             border-radius: 20px;
 
-            box-shadow:
+            padding: 30px 22px;
 
-                0 8px 25px
-                rgba(80, 65, 130, 0.07);
+            text-align: center;
 
             transition:
-
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
-
         }
 
 
         .research-card:hover {
 
-            transform:
-                translateY(-7px);
+            transform: translateY(-6px);
 
             box-shadow:
-
-                0 18px 40px
-                rgba(86, 68, 140, 0.15);
-
+                0 15px 30px
+                rgba(95, 70, 135, 0.15);
         }
 
 
-        /* =========================================
-           RESEARCH ICON
-        ========================================= */
-
         .research-icon {
 
-            width: 70px;
+            width: 105px;
 
-            height: 70px;
+            height: 105px;
 
             margin:
-                0 auto 20px;
+                0 auto 22px;
+
+            border-radius: 50%;
 
             display: flex;
 
@@ -453,211 +335,186 @@
 
             justify-content: center;
 
-            border-radius: 50%;
+            color: #5b438e;
 
             background:
-
                 linear-gradient(
                     135deg,
-                    #eeebfb,
-                    #ded6f3
+                    #eee9f8,
+                    #dcd2ef
                 );
 
-            color: #7162b5;
+            box-shadow:
+                0 8px 20px
+                rgba(90, 65, 130, 0.10);
+        }
 
-            font-size: 30px;
 
+        .research-icon svg {
+
+            width: 68px;
+
+            height: 68px;
+
+            stroke: currentColor;
         }
 
 
         .research-card h3 {
 
-            margin:
-
-                0 0 12px;
+            color: #51407d;
 
             font-size: 19px;
 
-            font-weight: 500;
-
-            color: #514a91;
-
-            white-space: nowrap;
-
+            margin-bottom: 12px;
         }
 
 
         .research-card p {
 
-            margin: 0;
-
             font-size: 15px;
 
-            color: #686479;
+            color: #625c6e;
 
         }
 
 
-        /* =========================================
-           PUBLICATIONS
-        ========================================= */
+        /* =========================
+           BOTTOM GRID
+        ========================= */
 
-        .publication {
+        .bottom-grid {
 
-            padding: 22px;
+            display: grid;
 
-            margin-bottom: 18px;
+            grid-template-columns:
+                repeat(auto-fit, minmax(350px, 1fr));
+
+            gap: 30px;
+        }
+
+
+        .publication-box {
 
             background:
+                linear-gradient(
+                    135deg,
+                    #eee9f7,
+                    #e5def1
+                );
 
-                rgba(255, 255, 255, 0.75);
+            padding: 25px;
 
-            border-left:
-
-                4px solid #9687d1;
-
-            border-radius: 12px;
-
-            box-shadow:
-
-                0 5px 18px
-                rgba(90, 70, 140, 0.06);
-
-            transition:
-
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-
+            border-radius: 16px;
         }
 
 
-        .publication:hover {
+        .publication-box h3 {
 
-            transform:
-                translateX(5px);
+            color: #4e3e78;
 
-            box-shadow:
-
-                0 10px 25px
-                rgba(90, 70, 140, 0.10);
-
+            margin-bottom: 8px;
         }
 
 
-        .publication h3 {
-
-            margin-top: 0;
-
-            color: #514a91;
-
-            font-size: 18px;
-
-        }
-
-
-        .publication p {
-
-            color: #666276;
-
-        }
-
-
-        /* =========================================
+        /* =========================
            CONTACT
-        ========================================= */
+        ========================= */
 
-        .contact-info {
+        .contact p {
 
-            font-size: 17px;
-
-            color: #5f5a72;
-
+            margin-bottom: 12px;
         }
 
 
-        .contact-info a {
+        .contact a {
 
-            color: #6d5cad;
+            color: #63479b;
 
             text-decoration: none;
 
             font-weight: 500;
+        }
+
+
+        .contact a:hover {
+
+            text-decoration: underline;
 
         }
 
 
-        .contact-info a:hover {
-
-            color: #483b82;
-
-        }
-
-
-        /* =========================================
+        /* =========================
            FOOTER
-        ========================================= */
+        ========================= */
 
         footer {
 
             text-align: center;
 
-            padding:
-                30px 20px;
+            padding: 25px;
 
-            color: #77728b;
+            background:
+                rgba(210, 201, 230, 0.6);
 
-            font-size: 14px;
-
+            color: #5d5670;
         }
 
 
-        /* =========================================
+        /* =========================
            MOBILE
-        ========================================= */
+        ========================= */
 
-        @media
-        (max-width: 700px) {
+        @media (max-width: 700px) {
 
-            .hero-content {
+            .hero {
 
                 flex-direction: column;
 
                 text-align: center;
 
+                padding: 50px 8%;
             }
 
 
-            .hero {
+            .profile-image {
 
-                padding-top: 70px;
+                width: 150px;
 
+                height: 150px;
+
+                min-width: 150px;
             }
 
 
-            .research-tags {
+            .research-line {
 
                 white-space: normal;
-
             }
 
 
             nav {
 
-                flex-wrap: wrap;
-
                 gap: 18px;
 
-                margin-top: -25px;
+                font-size: 14px;
 
+                overflow-x: auto;
+
+                justify-content: flex-start;
             }
 
 
-            .research-card h3 {
+            nav a {
 
-                white-space: normal;
-
+                white-space: nowrap;
             }
 
+
+            .bottom-grid {
+
+                grid-template-columns: 1fr;
+            }
         }
 
     </style>
@@ -668,46 +525,36 @@
 <body>
 
 
-    <!-- =====================================
+    <!-- =========================
          HERO
-    ====================================== -->
+    ========================= -->
 
     <header class="hero">
 
+        <!-- CHANGE THIS FILE NAME
+             IF YOUR PHOTO HAS A
+             DIFFERENT NAME -->
+
+        <img
+            src="anindita.jpeg"
+            alt="Anindita Sarkar"
+            class="profile-image">
+
+
         <div class="hero-content">
 
-            <img
-                src="anindita.jpeg"
-                alt="Anindita Sarkar"
-                class="profile-img"
-            >
+            <h1>Anindita Sarkar</h1>
 
+            <p class="subtitle">
+                Research Scholar · IIT Kharagpur
+            </p>
 
-            <div class="hero-text">
-
-                <h1>
-                    Anindita Sarkar
-                </h1>
-
-
-                <h2>
-                    Research Scholar · IIT Kharagpur
-                </h2>
-
-
-                <p class="research-tags">
-
-                    Functional Materials
-                    ·
-                    Electron Microscopy
-                    ·
-                    Electrocatalysis
-                    ·
-                    Density Functional Theory
-
-                </p>
-
-            </div>
+            <p class="research-line">
+                Functional Materials ·
+                Electron Microscopy ·
+                Electrocatalysis ·
+                Density Functional Theory
+            </p>
 
         </div>
 
@@ -715,45 +562,34 @@
 
 
 
-    <!-- =====================================
+    <!-- =========================
          NAVIGATION
-    ====================================== -->
+    ========================= -->
 
     <nav>
 
-        <a href="#about">
-            About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#research">
-            Research
-        </a>
+        <a href="#research">Research</a>
 
-        <a href="#publications">
-            Publications
-        </a>
+        <a href="#publications">Publications</a>
 
-        <a href="#contact">
-            Contact
-        </a>
+        <a href="#contact">Contact</a>
 
     </nav>
 
 
 
-    <main>
+    <main class="container">
 
 
-        <!-- =====================================
+        <!-- =========================
              ABOUT
-        ====================================== -->
+        ========================= -->
 
         <section id="about">
 
-            <h2>
-                About Me
-            </h2>
-
+            <h2>About Me</h2>
 
             <p class="about-text">
 
@@ -771,98 +607,521 @@
 
 
 
-        <!-- =====================================
-             RESEARCH INTERESTS
-        ====================================== -->
+        <!-- =========================
+             RESEARCH
+        ========================= -->
 
         <section id="research">
 
-            <h2>
-                Research Interests
-            </h2>
+            <h2>Research Interests</h2>
 
 
             <div class="research-grid">
 
 
+                <!-- MATERIALS SYNTHESIS -->
+
                 <div class="research-card">
 
                     <div class="research-icon">
-                        ⚗
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                            <!-- bubbles -->
+
+                            <circle
+                                cx="63"
+                                cy="15"
+                                r="4"
+                                stroke-width="3"/>
+
+                            <circle
+                                cx="58"
+                                cy="27"
+                                r="3"
+                                stroke-width="3"/>
+
+
+                            <!-- flask -->
+
+                            <path
+                                d="
+                                M40 18
+                                H60
+
+                                M45 18
+                                V42
+
+                                L25 76
+
+                                C21 83
+                                26 90
+                                34 90
+
+                                H66
+
+                                C74 90
+                                79 83
+                                75 76
+
+                                L55 42
+
+                                V18
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"
+
+                                stroke-linejoin="round"/>
+
+
+                            <!-- liquid -->
+
+                            <path
+                                d="
+                                M30 76
+                                H70
+                                "
+
+                                stroke-width="3"
+
+                                stroke-linecap="round"/>
+
+
+                            <circle
+                                cx="52"
+                                cy="80"
+                                r="2"
+                                fill="currentColor"
+                                stroke="none"/>
+
+                        </svg>
+
                     </div>
 
-                    <h3>
-                        Materials Synthesis
-                    </h3>
+
+                    <h3>Materials Synthesis</h3>
 
                     <p>
-
-                        Design and synthesis of
-                        advanced functional materials.
-
+                        Design and synthesis of advanced
+                        functional materials.
                     </p>
 
                 </div>
 
 
 
+                <!-- ELECTRON MICROSCOPY -->
+
                 <div class="research-card">
 
                     <div class="research-icon">
-                        🔬
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+
+
+                            <!-- top -->
+
+                            <path
+                                d="
+                                M48 15
+                                H60
+                                V27
+                                H48
+                                Z
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linejoin="round"/>
+
+
+                            <!-- microscope body -->
+
+                            <path
+                                d="
+                                M52 27
+                                V38
+
+                                H65
+
+                                V60
+
+                                H48
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"
+
+                                stroke-linejoin="round"/>
+
+
+                            <!-- lens -->
+
+                            <circle
+                                cx="56"
+                                cy="48"
+                                r="5"
+                                stroke-width="3"/>
+
+
+                            <!-- curved arm -->
+
+                            <path
+                                d="
+                                M65 40
+
+                                C80 48
+                                80 70
+                                65 76
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+
+                            <!-- stage -->
+
+                            <path
+                                d="
+                                M48 60
+                                L36 72
+
+                                H74
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"
+
+                                stroke-linejoin="round"/>
+
+
+                            <!-- base -->
+
+                            <path
+                                d="
+                                M30 84
+                                H76
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+
+                            <path
+                                d="
+                                M42 72
+                                H68
+
+                                V84
+                                H42
+                                Z
+                                "
+
+                                stroke-width="3"
+
+                                stroke-linejoin="round"/>
+
+                        </svg>
+
                     </div>
 
-                    <h3>
-                        Electron Microscopy
-                    </h3>
+
+                    <h3>Electron Microscopy</h3>
 
                     <p>
-
-                        Atomic-scale investigation
-                        of materials structure and chemistry.
-
+                        Atomic-scale investigation of
+                        materials structure and chemistry.
                     </p>
 
                 </div>
 
 
 
+                <!-- ELECTROCATALYSIS -->
+
                 <div class="research-card">
 
                     <div class="research-icon">
-                        ⚡
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+
+
+                            <!-- electrochemical cell -->
+
+                            <path
+                                d="
+                                M18 38
+                                H82
+
+                                V76
+
+                                C82 84
+                                76 88
+                                68 88
+
+                                H32
+
+                                C24 88
+                                18 84
+                                18 76
+
+                                Z
+                                "
+
+                                stroke-width="3"
+
+                                stroke-linejoin="round"/>
+
+
+                            <!-- CE -->
+
+                            <path
+                                d="
+                                M35 22
+                                V72
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+
+                            <!-- WE -->
+
+                            <path
+                                d="
+                                M50 16
+                                V72
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+
+                            <!-- RE -->
+
+                            <path
+                                d="
+                                M67 25
+                                V72
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+
+                            <!-- liquid -->
+
+                            <path
+                                d="
+                                M22 72
+                                H78
+                                "
+
+                                stroke-width="3"/>
+
+
+                            <!-- labels -->
+
+                            <text
+                                x="28"
+                                y="17"
+                                font-size="10"
+                                fill="currentColor"
+                                stroke="none">
+
+                                CE
+
+                            </text>
+
+
+                            <text
+                                x="44"
+                                y="12"
+                                font-size="10"
+                                fill="currentColor"
+                                stroke="none">
+
+                                WE
+
+                            </text>
+
+
+                            <text
+                                x="62"
+                                y="20"
+                                font-size="10"
+                                fill="currentColor"
+                                stroke="none">
+
+                                RE
+
+                            </text>
+
+
+                            <!-- bubbles -->
+
+                            <circle
+                                cx="48"
+                                cy="58"
+                                r="2"
+                                fill="currentColor"
+                                stroke="none"/>
+
+                            <circle
+                                cx="53"
+                                cy="51"
+                                r="1.5"
+                                fill="currentColor"
+                                stroke="none"/>
+
+                        </svg>
+
                     </div>
 
-                    <h3>
-                        Electrocatalysis
-                    </h3>
+
+                    <h3>Electrocatalysis</h3>
 
                     <p>
-
-                        Investigation of
-                        electrocatalytic activity.
-
+                        Investigation of electrocatalytic
+                        activity and energy conversion.
                     </p>
 
                 </div>
 
 
 
+                <!-- DFT -->
+
                 <div class="research-card">
 
                     <div class="research-icon">
-                        ⌬
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+
+
+                            <!-- computer -->
+
+                            <rect
+                                x="18"
+                                y="20"
+                                width="64"
+                                height="46"
+                                rx="3"
+
+                                stroke-width="4"/>
+
+
+                            <!-- molecular structure -->
+
+                            <circle
+                                cx="50"
+                                cy="43"
+                                r="4"
+
+                                stroke-width="2"/>
+
+
+                            <circle
+                                cx="38"
+                                cy="34"
+                                r="3"
+
+                                stroke-width="2"/>
+
+
+                            <circle
+                                cx="62"
+                                cy="34"
+                                r="3"
+
+                                stroke-width="2"/>
+
+
+                            <circle
+                                cx="38"
+                                cy="53"
+                                r="3"
+
+                                stroke-width="2"/>
+
+
+                            <circle
+                                cx="62"
+                                cy="53"
+                                r="3"
+
+                                stroke-width="2"/>
+
+
+                            <!-- bonds -->
+
+                            <path
+                                d="
+                                M50 43
+                                L38 34
+
+                                M50 43
+                                L62 34
+
+                                M50 43
+                                L38 53
+
+                                M50 43
+                                L62 53
+                                "
+
+                                stroke-width="2"/>
+
+
+                            <!-- stand -->
+
+                            <path
+                                d="
+                                M42 66
+                                V78
+
+                                M58 66
+                                V78
+
+                                M30 82
+                                H70
+                                "
+
+                                stroke-width="4"
+
+                                stroke-linecap="round"/>
+
+                        </svg>
+
                     </div>
 
-                    <h3>
-                        Density Functional Theory
-                    </h3>
+
+                    <h3>Density Functional Theory</h3>
 
                     <p>
-
-                        First-principles investigation
-                        of structure and properties.
-
+                        First-principles investigation of
+                        material structure and properties.
                     </p>
 
                 </div>
@@ -874,68 +1133,54 @@
 
 
 
-        <!-- =====================================
-             PUBLICATIONS
-        ====================================== -->
+        <!-- =========================
+             PUBLICATIONS + CONTACT
+        ========================= -->
 
-        <section id="publications">
-
-            <h2>
-                Publications
-            </h2>
+        <div class="bottom-grid">
 
 
-            <div class="publication">
+            <section id="publications">
 
-                <h3>
-                    Research Publications
-                </h3>
+                <h2>Publications</h2>
+
+
+                <div class="publication-box">
+
+                    <h3>Research Publications</h3>
+
+                    <p>
+                        Selected publications and ongoing
+                        research work will be listed here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <section
+                id="contact"
+                class="contact">
+
+                <h2>Contact</h2>
+
 
                 <p>
-
-                    Selected publications and ongoing
-                    research work will be listed here.
-
-                </p>
-
-            </div>
-
-
-            <!--
-            ADD YOUR PUBLICATIONS BELOW
-            -->
-
-
-        </section>
-
-
-
-        <!-- =====================================
-             CONTACT
-        ====================================== -->
-
-        <section id="contact">
-
-            <h2>
-                Contact
-            </h2>
-
-
-            <div class="contact-info">
-
-                <p>
-
                     Feel free to connect with me regarding
-                    research collaborations and academic opportunities.
-
+                    research collaborations and academic
+                    opportunities.
                 </p>
 
 
                 <p>
 
-                    LinkedIn:
-                    <a href="YOUR-LINKEDIN-LINK"
-                       target="_blank">
+                    <strong>LinkedIn:</strong>
+
+                    <a
+                        href="#"
+                        target="_blank">
 
                         Connect with me
 
@@ -946,9 +1191,11 @@
 
                 <p>
 
-                    ORCID:
-                    <a href="YOUR-ORCID-LINK"
-                       target="_blank">
+                    <strong>ORCID:</strong>
+
+                    <a
+                        href="#"
+                        target="_blank">
 
                         View my research profile
 
@@ -956,19 +1203,19 @@
 
                 </p>
 
+            </section>
 
-            </div>
 
-        </section>
+        </div>
 
 
     </main>
 
 
 
-    <!-- =====================================
+    <!-- =========================
          FOOTER
-    ====================================== -->
+    ========================= -->
 
     <footer>
 

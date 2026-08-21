@@ -1,457 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anindita Sarkar | Researcher | IIT Kharagpur</title>
+    <title>Anindita Sarkar | Researcher | IIT Kharagpur</title>
 
-<style>
+    <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        /* ---------- GLOBAL ---------- */
 
-html {
-    scroll-behavior: smooth;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    background: #f7f8fb;
-    color: #30343b;
-    line-height: 1.7;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* ---------- HEADER ---------- */
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background: #f7f8fb;
+            color: #30343b;
+            line-height: 1.7;
+        }
 
-header {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb, #0891b2);
-    color: white;
-    padding: 70px 30px;
-}
 
-.hero {
-    max-width: 1050px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
+        /* ---------- HEADER ---------- */
 
-.profile-photo {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid rgba(255,255,255,0.9);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
-    flex-shrink: 0;
-}
+        header {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb, #0891b2);
+            color: white;
+            padding: clamp(45px, 7vw, 70px) 30px;
+        }
 
-.hero-text h1 {
-    font-size: 52px;
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin-bottom: 8px;
-}
+        .hero {
+            max-width: 1050px;
+            margin: auto;
 
-.hero-text h2 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 18px;
-}
+            display: flex;
+            align-items: center;
 
-.hero-text p {
-    font-size: 17px;
-    font-weight: 300;
-    opacity: 0.95;
-}
+            gap: clamp(25px, 5vw, 50px);
 
-/* ---------- NAVIGATION ---------- */
+            flex-wrap: wrap;
+        }
 
-nav {
-    background: white;
-    padding: 18px;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
+        .profile-photo {
+            width: clamp(140px, 18vw, 190px);
+            height: clamp(140px, 18vw, 190px);
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    margin: 0 22px;
-    font-size: 15px;
-    font-weight: 400;
-    transition: color 0.2s;
-}
+            object-fit: cover;
+            border-radius: 50%;
 
-nav a:hover {
-    color: #2563eb;
-}
+            border: 5px solid rgba(255, 255, 255, 0.9);
 
-/* ---------- MAIN ---------- */
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
 
-main {
-    max-width: 1050px;
-    margin: 55px auto;
-    padding: 0 25px;
-}
+            flex-shrink: 0;
+        }
 
-section {
-    background: white;
-    padding: 42px;
-    margin-bottom: 35px;
-    border-radius: 18px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-}
+        .hero-text {
+            flex: 1 1 400px;
+            min-width: 0;
+        }
 
-section h2 {
-    color: #2563eb;
-    font-size: 28px;
-    font-weight: 400;
-    margin-bottom: 22px;
-}
+        .hero-text h1 {
+            font-size: clamp(36px, 5vw, 52px);
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
 
-section p {
-    font-size: 16px;
-    font-weight: 300;
-}
+        .hero-text h2 {
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 300;
+            margin-bottom: 18px;
+            line-height: 1.4;
+        }
 
-/* ---------- RESEARCH INTERESTS ---------- */
+        .hero-text p {
+            font-size: clamp(15px, 2vw, 17px);
+            font-weight: 300;
+            opacity: 0.95;
+            overflow-wrap: break-word;
+        }
 
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
 
-.research-card {
-    padding: 25px;
-    border-radius: 15px;
-    background: #f5f7ff;
-    border: 1px solid #e5e9f5;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+        /* ---------- NAVIGATION ---------- */
 
-.research-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(37,99,235,0.10);
-}
+        nav {
+            background: white;
 
-.research-card h3 {
-    color: #2563eb;
-    font-size: 18px;
-    white-space: nowrap;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
+            padding: 18px;
 
-.research-card p {
-    font-size: 14px;
-    line-height: 1.6;
-}
+            text-align: center;
 
-/* ---------- PUBLICATIONS ---------- */
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 
-.publication {
-    padding: 22px 0;
-    border-bottom: 1px solid #e8eaf0;
-}
+            position: sticky;
+            top: 0;
 
-.publication:last-child {
-    border-bottom: none;
-}
+            z-index: 10;
 
-.publication h3 {
-    font-size: 17px;
-    font-weight: 400;
-    color: #30343b;
-}
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 25px;
+        }
 
-.publication p {
-    font-size: 14px;
-    margin-top: 5px;
-    color: #666;
-}
+        nav a {
+            color: #333;
 
-/* ---------- CONTACT ---------- */
+            text-decoration: none;
 
-.contact-links {
-    display: flex;
-    gap: 25px;
-    margin-top: 25px;
-}
+            font-size: 15px;
 
-.contact-links a {
-    color: #2563eb;
-    text-decoration: none;
-    font-size: 15px;
-}
+            font-weight: 400;
 
-.contact-links a:hover {
-    text-decoration: underline;
-}
+            transition: color 0.2s;
+        }
 
-/* ---------- FOOTER ---------- */
+        nav a:hover {
+            color: #2563eb;
+        }
 
-footer {
-    text-align: center;
-    padding: 35px;
-    color: #777;
-    font-size: 14px;
-}
 
-/* ---------- MOBILE ---------- */
+        /* ---------- MAIN ---------- */
 
-@media (max-width: 800px) {
+        main {
+            width: min(1050px, calc(100% - 40px));
 
-    header {
-        padding: 50px 20px;
-    }
+            margin: clamp(30px, 5vw, 55px) auto;
+        }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
+        section {
+            background: white;
 
-    .profile-photo {
-        width: 160px;
-        height: 160px;
-    }
+            padding: clamp(25px, 5vw, 42px);
 
-    .hero-text h1 {
-        font-size: 40px;
-    }
+            margin-bottom: 35px;
 
-    .hero-text h2 {
-        font-size: 20px;
-    }
+            border-radius: 18px;
 
-    .hero-text p {
-        font-size: 15px;
-    }
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        }
 
-    nav a {
-        margin: 0 9px;
-        font-size: 14px;
-    }
+        section h2 {
+            color: #2563eb;
 
-    main {
-        margin: 30px auto;
-        padding: 0 15px;
-    }
+            font-size: clamp(24px, 3vw, 28px);
 
-    section {
-        padding: 28px 22px;
-        margin-bottom: 25px;
-    }
+            font-weight: 400;
 
-    .research-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+            margin-bottom: 22px;
+        }
 
-}
+        section p {
+            font-size: 16px;
+            font-weight: 300;
+        }
 
-</style>
+
+        /* ---------- RESEARCH INTERESTS ---------- */
+
+        .research-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+
+            gap: 20px;
+
+            width: 100%;
+        }
+
+        .research-card {
+
+            min-width: 0;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            background: #f5f7ff;
+
+            border: 1px solid #e5e9f5;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .research-card:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.10);
+        }
+
+        .research-card h3 {
+
+            color: #2563eb;
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+
+            line-height: 1.35;
+
+            overflow-wrap: break-word;
+        }
+
+        .research-card p {
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ---------- PUBLICATIONS ---------- */
+
+        .publication {
+
+            padding: 22px 0;
+
+            border-bottom:
+                1px solid #e8eaf0;
+        }
+
+        .publication:last-child {
+
+            border-bottom: none;
+        }
+
+        .publication h3 {
+
+            font-size: 17px;
+
+            font-weight: 400;
+
+            color: #30343b;
+        }
+
+        .publication p {
+
+            font-size: 14px;
+
+            margin-top: 5px;
+
+            color: #666;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-links {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px 25px;
+
+            margin-top: 25px;
+        }
+
+        .contact-links a {
+
+            color: #2563eb;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            overflow-wrap: break-word;
+        }
+
+        .contact-links a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* ---------- SMALL SCREEN ADJUSTMENTS ---------- */
+
+        @media (max-width: 650px) {
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .hero-text {
+
+                flex-basis: auto;
+            }
+
+            header {
+
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            main {
+
+                width: min(100% - 24px, 1050px);
+            }
+
+            nav {
+
+                gap: 8px 18px;
+            }
+
+            nav a {
+
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
 <body>
 
-<!-- HEADER -->
 
-<header>
+    <!-- ---------- HEADER ---------- -->
 
-<div class="hero">
+    <header>
 
-    <img src="anindita.jpeg"
-         alt="Anindita Sarkar"
-         class="profile-photo">
+        <div class="hero">
 
-    <div class="hero-text">
+            <img
+                src="anindita.jpeg"
+                alt="Anindita Sarkar"
+                class="profile-photo"
+            >
 
-        <h1>Anindita Sarkar</h1>
+            <div class="hero-text">
 
-        <h2>Research Scholar · IIT Kharagpur</h2>
+                <h1>Anindita Sarkar</h1>
 
-        <p>
-            Functional Materials · Electron Microscopy · Electrocatalysis ·
-            Density Functional Theory
-        </p>
+                <h2>
+                    Research Scholar · IIT Kharagpur
+                </h2>
 
-    </div>
+                <p>
+                    Functional Materials · Electron Microscopy ·
+                    Electrocatalysis · Density Functional Theory
+                </p>
 
-</div>
+            </div>
 
-</header>
+        </div>
 
+    </header>
 
-<!-- NAVIGATION -->
 
-<nav>
+    <!-- ---------- NAVIGATION ---------- -->
 
-<a href="#about">About</a>
-<a href="#research">Research</a>
-<a href="#publications">Publications</a>
-<a href="#contact">Contact</a>
+    <nav>
 
-</nav>
+        <a href="#about">About</a>
 
+        <a href="#research">Research</a>
 
-<!-- CONTENT -->
+        <a href="#publications">Publications</a>
 
-<main>
+        <a href="#contact">Contact</a>
 
+    </nav>
 
-<!-- ABOUT -->
 
-<section id="about">
+    <!-- ---------- MAIN CONTENT ---------- -->
 
-<h2>About Me</h2>
+    <main>
 
-<p>
-I am a research scholar at IIT Kharagpur, working on the design and
-engineering of functional materials for catalytic and energy-related
-applications. My research combines experimental studies, advanced
-characterization and computational approaches to understand
-structure–property relationships in materials.
-</p>
 
-<br>
+        <!-- ---------- ABOUT ---------- -->
 
-<p>
-By training, I am a chemist, with Bachelor's and Master's degrees in
-Chemistry, followed by an M. Tech in Materials Science and Engineering.
-This interdisciplinary background allows me to bridge fundamental
-chemistry with materials engineering.
-</p>
+        <section id="about">
 
-</section>
+            <h2>About Me</h2>
 
+            <p>
+                I am a research scholar at IIT Kharagpur, working on the
+                design and engineering of functional materials for catalytic
+                and energy-related applications. My research combines
+                experimental studies, advanced characterization and
+                computational approaches to understand structure–property
+                relationships in materials.
+            </p>
 
-<!-- RESEARCH -->
+            <br>
 
-<section id="research">
+            <p>
+                By training, I am a chemist, with Bachelor's and Master's
+                degrees in Chemistry, followed by an M. Tech in Materials
+                Science and Engineering. This interdisciplinary background
+                allows me to bridge fundamental chemistry with materials
+                engineering.
+            </p>
 
-<h2>Research Interests</h2>
+        </section>
 
-<div class="research-grid">
 
-<div class="research-card">
+        <!-- ---------- RESEARCH ---------- -->
 
-<h3>Materials Synthesis</h3>
+        <section id="research">
 
-<p>
-Design and synthesis of advanced functional materials.
-</p>
+            <h2>Research Interests</h2>
 
-</div>
+            <div class="research-grid">
 
 
-<div class="research-card">
+                <div class="research-card">
 
-<h3>Electron Microscopy</h3>
+                    <h3>Materials Synthesis</h3>
 
-<p>
-Atomic-scale investigation of materials structure and chemistry.
-</p>
+                    <p>
+                        Design and synthesis of advanced functional
+                        materials.
+                    </p>
 
-</div>
+                </div>
 
 
-<div class="research-card">
+                <div class="research-card">
 
-<h3>Electrocatalysis</h3>
+                    <h3>Electron Microscopy</h3>
 
-<p>
-Investigation of electrocatalytic activity.
-</p>
+                    <p>
+                        Atomic-scale investigation of materials
+                        structure and chemistry.
+                    </p>
 
-</div>
+                </div>
 
 
-<div class="research-card">
+                <div class="research-card">
 
-<h3>Density Functonal Theory</h3>
+                    <h3>Electrocatalysis</h3>
 
-<p>
-First-principles investigation of structure and properties.
-</p>
+                    <p>
+                        Investigation of electrocatalytic activity.
+                    </p>
 
-</div>
+                </div>
 
-</div>
 
-</section>
+                <div class="research-card">
 
+                    <h3>Density Functional Theory</h3>
 
-<!-- PUBLICATIONS -->
+                    <p>
+                        First-principles investigation of structure
+                        and properties.
+                    </p>
 
-<section id="publications">
+                </div>
 
-<h2>Publications</h2>
 
-<div class="publication">
+            </div>
 
-<h3>Research publications</h3>
+        </section>
 
-<p>
-Selected publications and ongoing research work will be listed here.
-</p>
 
-</div>
+        <!-- ---------- PUBLICATIONS ---------- -->
 
-</section>
+        <section id="publications">
 
+            <h2>Publications</h2>
 
-<!-- CONTACT -->
+            <div class="publication">
 
-<section id="contact">
+                <h3>Research Publications</h3>
 
-<h2>Contact</h2>
+                <p>
+                    Selected publications and ongoing research work
+                    will be listed here.
+                </p>
 
-<p>
-I would be happy to connect regarding research, collaborations and
-academic opportunities.
-</p>
+            </div>
 
-<div class="contact-links">
+        </section>
 
-<a href="mailto:YOUR_EMAIL@gmail.com">Email</a>
 
-<a href="YOUR_LINKEDIN_URL" target="_blank">
-LinkedIn
-</a>
+        <!-- ---------- CONTACT ---------- -->
 
-<a href="YOUR_RESEARCHGATE_URL" target="_blank">
-ResearchGate
-</a>
+        <section id="contact">
 
-</div>
+            <h2>Contact</h2>
 
-</section>
+            <p>
+                I would be happy to connect regarding research,
+                collaborations and academic opportunities.
+            </p>
 
 
-</main>
+            <div class="contact-links">
 
+                <a href="mailto:YOUR_EMAIL@gmail.com">
+                    Email
+                </a>
 
-<!-- FOOTER -->
+                <a
+                    href="YOUR_LINKEDIN_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
 
-<footer>
+                <a
+                    href="YOUR_RESEARCHGATE_URL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ResearchGate
+                </a>
 
-© 2026 Anindita Sarkar · Research Scholar · IIT Kharagpur
+            </div>
 
-</footer>
+        </section>
+
+
+    </main>
+
+
+    <!-- ---------- FOOTER ---------- -->
+
+    <footer>
+
+        © 2026 Anindita Sarkar · Research Scholar · IIT Kharagpur
+
+    </footer>
 
 
 </body>
+
 </html>
